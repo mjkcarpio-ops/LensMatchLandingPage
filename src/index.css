@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Core Dark Orange of the LensMatchSemiFinal App */
+  --primary-color: #D17A4A;        /* primary_orange_dark from LensMatchSemiFinal */
+  --primary-hover: #B0561B;        /* primary_orange_text (deep burnt orange) */
+  --primary-dark: #B0561B;
+  --primary-light: #F4A261;       /* primary_orange */
+  --primary-tint: #FDEBDD;        /* primary_orange_tint */
+  --primary-text: #B0561B;        /* primary_orange_text */
+  --primary-shadow: rgba(209, 122, 74, 0.35);
+
+  /* Core Secondary (Emerald Green) - from LensMatch Staff Web Portal */
+  --secondary-color: #169D73;
+  --secondary-hover: #0E7F5C;
+  --secondary-dark: #0E7F5C;
+  --secondary-light: #22A27A;
+  --secondary-tint: #E8F8F2;
+  --secondary-text: #0E7F5C;
+  --secondary-border: #BDEBD9;
+  --secondary-shadow: rgba(22, 157, 115, 0.25);
+
+  /* Tertiary (Sage Green) & Soft Blue Accents */
+  --tertiary-sage: #169D73;
+  --tertiary-sage-tint: #E8F8F2;
+  --accent-blue: #7FA9C4;
+  --accent-blue-tint: #EAF3F8;
+
+  /* Neutrals & Surfaces - from LensMatchSemiFinal */
+  --bg-color: #ffffff;
+  --bg-warm: #FFF8F2;
+  --bg-card: #ffffff;
+  --text-primary: #2E2E2E;
+  --text-secondary: #757575;
+  --border-color: #E0E0E0;
+  --border-radius: 8px;
+  --transition-speed: 0.2s;
+
+  /* Status Feedback */
+  --status-success: #169D73;
+  --status-warning: #D9A441;
+  --status-error: #E57373;
+  --status-success-bg: #E8F8F2;
+  --status-success-text: #0E7F5C;
+  --status-error-bg: #FFEBEE;
+  --status-error-text: #C62828;
+  
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Deep Dark Orange Theme (from LensMatchSemiFinal values-night/colors.xml) */
+[data-theme="dark"] {
+  --primary-color: #F4A261;
+  --primary-hover: #E07000;
+  --primary-dark: #D17A4A;
+  --primary-light: #FFB347;
+  --primary-tint: #3D2000;
+  --primary-text: #FFCC88;
+  --primary-shadow: rgba(244, 162, 97, 0.25);
+
+  --secondary-color: #22A27A;
+  --secondary-hover: #3EAD89;
+  --secondary-dark: #169D73;
+  --secondary-light: #52C49C;
+  --secondary-tint: #0B291E;
+  --secondary-text: #A5D6A7;
+  --secondary-border: #1B4E3A;
+  --secondary-shadow: rgba(34, 162, 122, 0.3);
+
+  --bg-color: #1A0A00;            /* bgPrimary from values-night (#1A0A00) */
+  --bg-warm: #2B1500;             /* bgCard from values-night (#2B1500) */
+  --bg-card: #2B1500;             /* bgCard surface (#2B1500) */
+  --text-primary: #FFFFFF;        /* textPrimary (#FFFFFF) */
+  --text-secondary: #FFCC88;      /* textSecondary (#FFCC88) */
+  --border-color: #5C3300;        /* borderCard (#5C3300) */
+
+  --status-success: #22A27A;
+  --status-success-bg: #0B291E;
+  --status-success-text: #A5D6A7;
+  --status-error-bg: #3B1818;
+  --status-error-text: #EF9A9A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: clip;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* App layout wrapper to ensure footer sticks cleanly */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-speed) ease;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* Accessible focus styling for keyboard and assistive navigation */
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* Base button styles with WCAG recommended touch targets */
+button, .btn {
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+  font-weight: 600;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px var(--primary-shadow);
+}
+
+button:active, .btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #ffffff;
+}
+
+.btn-outline {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-tint);
+  border-color: var(--primary-color);
+  color: var(--primary-text);
+}
+
+/* Responsive Container - Maximizing screen utilization across wide desktop monitors & mobile */
+.container {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 3.5vw, 4rem);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Prevent auto-zoom on iOS when tapping inputs */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Utilities */
+.text-gradient {
+  background: linear-gradient(90deg, #111, #555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

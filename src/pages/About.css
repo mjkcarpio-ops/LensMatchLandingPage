@@ -1,0 +1,368 @@
+.about-container {
+  padding: 3.5rem 0 5rem 0;
+  width: 100%;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  background-color: var(--primary-tint);
+  color: var(--primary-text);
+  font-size: 0.825rem;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--primary-light);
+}
+
+.about-title {
+  font-size: clamp(2rem, 4vw + 0.8rem, 2.85rem);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.about-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* General Objective Card */
+.general-objective-card {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-warm) 100%);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 2.25rem;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.gen-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+  background-color: var(--primary-tint);
+  border: 1px solid var(--primary-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.general-objective-card h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.general-objective-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Objectives Header */
+.objectives-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  margin-bottom: 0.5rem;
+}
+
+.objectives-header h2 {
+  font-size: clamp(1.6rem, 2.5vw + 0.6rem, 2.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.objectives-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* 3 Specific Objectives Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-card {
+  background-color: var(--bg-card);
+  padding: 2.25rem 1.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 24px var(--primary-shadow);
+}
+
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.about-icon {
+  color: var(--primary-color);
+}
+
+.objective-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+  background-color: var(--primary-tint);
+  border: 1px solid var(--primary-light);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.about-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.about-card p {
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.card-tech-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Ecosystem Section */
+.ecosystem-section {
+  background-color: var(--bg-warm);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 3rem 2.25rem;
+  margin-bottom: 4rem;
+}
+
+.ecosystem-section h2 {
+  font-size: clamp(1.4rem, 2vw + 0.6rem, 1.9rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.ecosystem-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.eco-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--primary-tint);
+  color: var(--primary-text);
+  border: 1px solid var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.eco-icon-portal {
+  background-color: var(--secondary-tint) !important;
+  color: var(--secondary-text) !important;
+  border-color: var(--secondary-border) !important;
+}
+
+.ecosystem-card.card-portal:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 8px 24px var(--secondary-shadow);
+}
+
+.ecosystem-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.ecosystem-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Significance Section */
+.significance-section {
+  margin-bottom: 4rem;
+}
+
+.significance-section h2 {
+  font-size: clamp(1.4rem, 2vw + 0.6rem, 1.9rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.significance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.significance-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.check-icon {
+  color: var(--secondary-color);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.significance-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.significance-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA */
+.about-cta {
+  text-align: center;
+  padding: 3.5rem 2rem;
+  background-color: var(--bg-warm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.about-cta h2 {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2rem);
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+
+.about-cta p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 1.75rem;
+}
+
+.about-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .significance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 2.5rem 0 3.5rem 0;
+  }
+
+  .general-objective-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .about-card,
+  .ecosystem-card,
+  .significance-item {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .about-cta-buttons {
+    flex-direction: column;
+  }
+
+  .about-cta-buttons button {
+    width: 100%;
+  }
+}
