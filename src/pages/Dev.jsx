@@ -3,6 +3,7 @@ import './Dev.css';
 import { User, Mail } from 'lucide-react';
 import joshImg from '../assets/josh.jpg';
 import morcImg from '../assets/Morc.jpg';
+import fritzImg from '../assets/fritz.jpg';
 
 const GithubIcon = ({ size = 16 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -25,8 +26,8 @@ const Dev = () => {
       name: 'Fritz C. Arrogante',
       role: 'Mobile App Developer',
       email: 'mfarrogante@tip.edu.ph',
-      description: 'Led Android application development, implementing MediaPipe Face Mesh face shape analysis (6 face shapes) and Google Gemini API personalized frame recommendations.',
-      image: null,
+      description: 'Led Android application development, implementing MediaPipe Face Mesh face shape analysis (7 face shapes) and Google Gemini API personalized frame recommendations.',
+      image: fritzImg,
       github: 'https://github.com/FCAHub',
       linkedin: 'https://linkedin.com'
     },

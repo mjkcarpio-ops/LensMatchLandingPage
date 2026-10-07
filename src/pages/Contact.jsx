@@ -11,26 +11,44 @@ const Contact = () => {
   });
   const [status, setStatus] = useState(null); // 'success' or 'error' or 'sending'
 
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (status === 'sending') return;
     setStatus('sending');
+    setErrorMessage(null);
     
-    // Simulating EmailJS / Backend integration delay
-    setTimeout(() => {
-      // In a real implementation, you would call your email service here
-      // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-      //   .then((result) => setStatus('success'), (error) => setStatus('error'));
+    try {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const endpoint = apiUrl.endsWith('/') ? `${apiUrl}api/contact` : `${apiUrl}/api/contact`;
       
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: 'General Inquiry', message: '' });
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
       
-      // Clear status after 5 seconds
-      setTimeout(() => setStatus(null), 5000);
-    }, 1500);
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: 'General Inquiry', message: '' });
+      } else {
+        setStatus('error');
+        setErrorMessage(data.message || 'Unable to send your message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Contact submission error:', error);
+      setStatus('error');
+      setErrorMessage('Unable to connect to the server. Please try again later.');
+    }
   };
 
   return (
@@ -48,21 +66,21 @@ const Contact = () => {
               <Mail className="info-icon" />
               <div>
                 <h4>Email</h4>
-                <p>support@lensmatch.com</p>
+                <p>franselleopticalclinicstaff@gmail.com</p>
               </div>
             </div>
             <div className="info-item">
               <Phone className="info-icon" />
               <div>
                 <h4>Phone</h4>
-                <p>+63 2 8XXX XXXX</p>
+                <p>09674206921</p>
               </div>
             </div>
             <div className="info-item">
               <MapPin className="info-icon" />
               <div>
                 <h4>Clinic address</h4>
-                <p>123 Sample Street, Quezon City, Metro Manila</p>
+                <p>419 Estero Cegado St, Quiapo, Manila, 1001 Metro Manila</p>
               </div>
             </div>
             <div className="info-item">
@@ -90,7 +108,7 @@ const Contact = () => {
               <div className="alert success">Your message has been sent successfully.</div>
             )}
             {status === 'error' && (
-              <div className="alert error">Unable to send your message. Please try again.</div>
+              <div className="alert error">{errorMessage || 'Unable to send your message. Please try again.'}</div>
             )}
 
             <form onSubmit={handleSubmit}>
