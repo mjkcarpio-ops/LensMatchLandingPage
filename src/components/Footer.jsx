@@ -37,6 +37,7 @@ const Footer = () => {
               <li><Link to="/privacy">Privacy Policy</Link></li>
               <li><Link to="/terms">Terms & Conditions</Link></li>
               <li><Link to="/dev">Dev</Link></li>
+              <li><a href="https://lensmatchstaffportal.onrender.com/login" target="_blank" rel="noopener noreferrer">Staff Portal</a></li>
             </ul>
           </div>
         </div>
