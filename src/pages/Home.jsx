@@ -59,7 +59,7 @@ const Home = () => {
             <div className="hero-metrics-strip">
               <div className="metric-pill">
                 <span className="metric-num">MediaPipe</span>
-                <span className="metric-desc">6 Face Shapes Detected</span>
+                <span className="metric-desc">7 Face Shapes Detected</span>
               </div>
               <div className="metric-divider"></div>
               <div className="metric-pill">

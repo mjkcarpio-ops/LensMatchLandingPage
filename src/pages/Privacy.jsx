@@ -111,7 +111,7 @@ const Privacy = () => {
               LensMatch uses real-time computer vision to perform facial landmark detection, measuring facial proportions such as jawline width, cheekbone distance, and forehead height.
             </p>
             <p>
-              These calculated landmark metrics are used strictly to classify your face shape (such as Oval, Round, Square, Heart, or Diamond) as the foundation for customized frame recommendations. Camera streams processed during face scanning are evaluated transiently on device and are not stored as public photo files.
+              These calculated landmark metrics are used strictly to classify your face shape (such as Oval, Round, Square, Heart, Diamond, or Triangle) as the foundation for customized frame recommendations. Camera streams processed during face scanning are evaluated transiently on device and are not stored as public photo files.
             </p>
           </section>
 

@@ -110,7 +110,7 @@ const Terms = () => {
           <section id="sec-3" className="legal-section">
             <h2>3. Face Shape Analysis</h2>
             <p>
-              Face shape analysis functionality detects facial landmark metrics to classify facial geometry parameters (such as Oval, Round, Square, Heart, or Diamond).
+              Face shape analysis functionality detects facial landmark metrics to classify facial geometry parameters (such as Oval, Round, Square, Heart, Diamond, or Triangle).
             </p>
             <p>
               Face shape metrics serve advisory recommendation purposes to guide frame selection and complement professional optometric evaluation.

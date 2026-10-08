@@ -48,7 +48,7 @@ const About = () => {
           </div>
           <h3>Face Shape Analysis (MediaPipe Face Mesh)</h3>
           <p>
-            To develop a face shape analysis feature using <strong>MediaPipe Face Mesh</strong> that identifies and classifies the user's face shape through facial landmark detection into six distinct categories: <strong>Oval, Round, Square, Heart, Oblong, and Diamond</strong>.
+            To develop a face shape analysis feature using <strong>MediaPipe Face Mesh</strong> that identifies and classifies the user's face shape through facial landmark detection into seven distinct categories: <strong>Oval, Round, Square, Heart, Oblong, Diamond, and Triangle</strong>.
           </p>
           <div className="card-tech-footer">
             <span>Tech: MediaPipe 468 Face Mesh</span>

@@ -117,7 +117,7 @@ const Download = () => {
               </div>
               <div className="spec-tile">
                 <span className="spec-label">Face Classifications</span>
-                <span className="spec-val">6 Shapes (Oval to Diamond)</span>
+                <span className="spec-val">7 Shapes (including Triangle)</span>
               </div>
               <div className="spec-tile">
                 <span className="spec-label">Backend & Storage</span>

@@ -36,7 +36,7 @@ const Guide = () => {
       number: 4,
       icon: <Cpu size={28} />,
       title: 'Face Shape Analysis (MediaPipe)',
-      description: 'MediaPipe Face Mesh detects facial landmarks and classifies your face shape into Oval, Round, Square, Heart, Oblong, or Diamond.'
+      description: 'MediaPipe Face Mesh detects facial landmarks and classifies your face shape into Oval, Round, Square, Heart, Oblong, Diamond, or Triangle.'
     },
     {
       number: 5,
