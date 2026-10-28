@@ -36,13 +36,13 @@ const frames = [
     tag: 'Staff Choice',
     shape: 'Soft Wayfarer',
     material: 'Organic Handcrafted Acetate',
-    bestFor: ['Round', 'Oval', 'Diamond'],
+    bestFor: ['Round', 'Oval'],
     color: 'Deep Black (#171717)',
     weight: '19g',
     dimensions: '52 - 19 - 145 mm',
     image: eyeglass2,
     arBadge: 'Unity 3D AR Frame Preview',
-    desc: 'Classic acetate silhouette with steel core reinforcement, ideal for round and diamond face shapes.'
+    desc: 'Classic acetate silhouette with steel core reinforcement, ideal for round and oval face shapes.'
   },
   {
     id: 'geometric',
@@ -117,7 +117,7 @@ const Download = () => {
               </div>
               <div className="spec-tile">
                 <span className="spec-label">Face Classifications</span>
-                <span className="spec-val">7 Shapes (including Triangle)</span>
+                <span className="spec-val">5 Shapes</span>
               </div>
               <div className="spec-tile">
                 <span className="spec-label">Backend & Storage</span>
