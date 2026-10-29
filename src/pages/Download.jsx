@@ -62,6 +62,8 @@ const frames = [
 ];
 
 const Download = () => {
+  // Simple client‑side platform detection – only true for Android browsers
+  const isAndroid = () => /Android/.test(navigator.userAgent || "");
   const [activeFrameIndex, setActiveFrameIndex] = useState(0);
   const [downloadModalOpen, setDownloadModalOpen] = useState(false);
   const activeFrame = frames[activeFrameIndex];
@@ -137,7 +139,7 @@ const Download = () => {
                 onClick={handleDownloadClick}
               >
                 <DownloadIcon size={20} />
-                <span>Download LensMatch APK (68.4 MB)</span>
+                <span>Download LensMatch APK (≈643 MB)</span>
               </button>
             </div>
 
@@ -279,7 +281,7 @@ const Download = () => {
               </div>
               <div className="modal-body">
                 <p>
-                  Download <strong>lensmatch-v1.0.0.apk (68.4 MB)</strong> with MediaPipe Face Mesh, Gemini AI, and Unity 3D AR Frame Preview.
+                  Download <strong>launcher-debug.apk (≈643 MB)</strong> with MediaPipe Face Mesh, Gemini AI, and Unity 3D AR Frame Preview.
                 </p>
                 <div className="modal-info-box">
                   <div className="info-row">
@@ -299,6 +301,12 @@ const Download = () => {
                   After downloading, open your device's Downloads folder and tap the APK to install the LensMatch application.
                 </p>
               </div>
+              {!isAndroid() && (
+                <div className="modal-info-box" style={{ marginTop: "1rem" }}>
+                  <strong>Android only</strong>
+                  <p>LensMatch is an Android application. Please open this page on an Android device to download and install the APK.</p>
+                </div>
+              )}
               <div className="modal-actions">
                 <button 
                   type="button" 
@@ -310,12 +318,15 @@ const Download = () => {
                 <button 
                   type="button" 
                   className="btn btn-primary"
+                  disabled={!isAndroid()}
                   onClick={() => {
-                    alert("LensMatch APK download initiated! (File: lensmatch-v1.0.0.apk)");
+                    if (isAndroid()) {
+                      window.open("https://github.com/MarcSantiagoPH/LensMatchMobile/releases/download/v1.0.0-demo/launcher-debug.apk", "_blank", "noopener,noreferrer");
+                    }
                     setDownloadModalOpen(false);
                   }}
                 >
-                  Confirm Download
+                  {isAndroid() ? "Confirm Download" : "Open on Android"}
                 </button>
               </div>
             </div>
