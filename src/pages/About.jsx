@@ -78,7 +78,7 @@ const About = () => {
           </div>
           <h3>Augmented Reality Frame Preview (Unity 3D)</h3>
           <p>
-            To implement an Augmented Reality (AR) frame preview feature using <strong>Unity 3D</strong> that enables users to realistically visualize different eyewear frame styles overlaid on their face via the device camera before making a selection.
+            To implement an Augmented Reality (AR) frame preview feature using <strong>Unity 3D</strong> that enables users to preview different eyewear frame styles overlaid on their face via the device camera before making a selection.
           </p>
           <div className="card-tech-footer">
             <span>Tech: Unity 3D Engine & Real-Time Camera Projection</span>

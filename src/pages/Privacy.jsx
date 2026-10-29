@@ -98,17 +98,17 @@ const Privacy = () => {
           <section id="sec-2" className="legal-section">
             <h2>2. Authentication</h2>
             <p>
-              User account creation and authentication are required to save frame preferences, access personalized AI eyewear recommendations, and manage reservation requests.
+              While the app provides optional account creation via Firebase Authentication, only frame reservation features require a signed‑in user. Other features such as AR preview and face‑shape analysis can be used without an account.
             </p>
             <p>
-              Authentication tokens and user credentials are managed securely to safeguard your active session and profile information.
+                The app uses Firebase Authentication to manage user sign‑in.
             </p>
           </section>
 
           <section id="sec-3" className="legal-section">
             <h2>3. Face Shape Analysis</h2>
             <p>
-              LensMatch uses real-time computer vision to perform facial landmark detection, measuring facial proportions such as jawline width, cheekbone distance, and forehead height.
+              LensMatch runs facial landmark detection locally on the device using on‑device computer vision. The extracted landmark metrics are used only to determine your face‑shape category.
             </p>
             <p>
               These calculated landmark metrics are used strictly to classify your face shape (such as Oval, Round, Square, Heart, or Oblong) as the foundation for customized frame recommendations. Camera streams processed during face scanning are evaluated transiently on device and are not stored as public photo files.
@@ -118,10 +118,10 @@ const Privacy = () => {
           <section id="sec-4" className="legal-section">
             <h2>4. AI-Powered Recommendations</h2>
             <p>
-              Calculated face shape parameters are processed through our Google Gemini-powered recommendation model to identify optimal frame shapes, rim styles, and proportions.
+              The app sends a text‑only prompt containing your detected face‑shape category to the Google Gemini API, which returns frame‑matching recommendations.
             </p>
             <p>
-              Recommendation queries utilize anonymized metric parameters to generate frame matches and do not transmit personally identifiable biometric files to external generative services.
+              These queries use anonymized metric parameters and do not transmit raw images, facial landmarks, or other biometric files to external services.
             </p>
           </section>
 
@@ -138,10 +138,13 @@ const Privacy = () => {
           <section id="sec-6" className="legal-section">
             <h2>6. Reservations</h2>
             <p>
-              When you reserve an eyewear frame through LensMatch, your selected frame ID, account contact information, and preferred reservation timestamp are transmitted to Franselle Optical Clinic.
+              When you reserve an eyewear frame through LensMatch, the app transmits the selected frame ID, your name, email address, optional phone number, and the quantity of frames requested to Franselle Optical Clinic.
             </p>
             <p>
-              Clinic personnel use this reservation information strictly to confirm frame inventory and prepare your selected frames for your scheduled clinic consultation.
+              The clinic uses this information solely to confirm inventory, schedule your appointment, and prepare the frames.
+            </p>
+            <p>
+              Pending reservation data may be temporarily stored in the app’s SharedPreferences to enable retry after network failures and is cleared once the reservation succeeds.
             </p>
           </section>
 
@@ -151,7 +154,7 @@ const Privacy = () => {
               We implement industry-standard administrative, technical, and physical safeguards to protect your account information and reservation data against unauthorized access, disclosure, or loss.
             </p>
             <p>
-              All network communications between the mobile application and backend services are secured using HTTPS/TLS encryption. Access to stored reservation data is restricted strictly to authorized staff supporting Franselle Optical Clinic.
+                All network communications between the mobile application and backend services use HTTPS/TLS encryption by default; the base URL (which is HTTPS) is defined in the app’s configuration and can be overridden at build time. Access to stored reservation data is intended to be limited to authorized staff supporting Franselle Optical Clinic, although the app itself does not enforce staff‑access controls.
             </p>
           </section>
 
@@ -166,12 +169,9 @@ const Privacy = () => {
           </section>
 
           <section id="sec-9" className="legal-section">
-            <h2>9. Data Retention and Account Deletion</h2>
+            <h2>9. Data Retention</h2>
             <p>
-              Personal account data and reservation records are retained for as long as your account remains active or as required to fulfill clinic reservations.
-            </p>
-            <p>
-              You have the right to request account deletion at any time in-app or by contacting support. Upon account deletion, your profile credentials, saved preferences, and personal reservation history are permanently removed.
+              Personal account data and reservation records are retained only as necessary to fulfill clinic reservations and comply legal obligations.
             </p>
           </section>
 

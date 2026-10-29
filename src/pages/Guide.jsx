@@ -54,7 +54,7 @@ const Guide = () => {
       number: 7,
       icon: <Eye size={28} />,
       title: 'AR Frame Preview (Unity 3D)',
-      description: 'Use Unity 3D Augmented Reality (AR) to realistically preview and visualize selected frames overlaid on your face.'
+      description: 'Use Unity 3D Augmented Reality (AR) to preview selected frames overlaid on your face.'
     },
     {
       number: 8,

@@ -160,7 +160,7 @@ const Home = () => {
             </div>
             <h2>Visit Franselle Optical Clinic</h2>
             <p>
-              Get your comprehensive eye checkup, try on catalog frames in person with registered optometrists, and experience LensMatch AR frame fitting right at the clinic.
+                                           Get your comprehensive eye checkup, try on catalog frames in person with registered optometrists, and experience LensMatch AR Frame Preview right at the clinic.
             </p>
           </div>
           <div className="cta-content-right">
